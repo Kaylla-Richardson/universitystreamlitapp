@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt 
 import numpy as np
+import pip
+pip.main(["install", "openpyxl"])
 
 st.set_page_config(layout="wide")
 
