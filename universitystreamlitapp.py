@@ -2,13 +2,11 @@ import streamlit as st
 import pandas as pd
 import altair as alt 
 import numpy as np
-import openpyxl as op
 
 st.set_page_config(layout="wide")
 
 #import the university data set
-university_dat = op.load_workbook("universityrankings.xlsx")
-university_data = university_dat.active
+university_data = pd.read_excel("universityrankings.xlsx")
 
 university = university_data["Institution"]
 national = university_data["National Rank"]
